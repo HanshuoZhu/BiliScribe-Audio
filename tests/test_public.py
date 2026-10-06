@@ -1,5 +1,8 @@
 """Public install and transcript interface checks; no network or model download."""
 import copy
+import io
+from types import SimpleNamespace
+from unittest.mock import patch
 import importlib.util
 import json
 from pathlib import Path
@@ -93,6 +96,19 @@ class PublicChecks(unittest.TestCase):
         self.assertEqual(result.returncode,0,result.stderr)
         data=common.read_json(next((self.root/'transcripts').glob('*.json')))
         self.assertIn('过去',data['segments'][0]['text'])
+    def test_glossary_logs_chinese_on_english_windows_console(self):
+        self.prepare()
+        glossary=self.root/'terms.json'
+        glossary.write_text(json.dumps({'以前':'过去'},ensure_ascii=False),encoding='utf-8')
+        output=io.BytesIO()
+        stream=io.TextIOWrapper(output,encoding='cp1252')
+        args=SimpleNamespace(apply_glossary=str(glossary),glossary_min_len=2,inputs=[str(self.root/'transcripts')],outdir=str(self.root/'transcripts'),dry_run=False)
+        with patch.object(sys,'stdout',stream),patch.object(sys,'stderr',stream):
+            self.assertEqual(transcribe.run_glossary(args),0)
+            stream.flush()
+            self.assertIn('以前',output.getvalue().decode('utf-8'))
+        self.assertIn('过去',common.read_json(next((self.root/'transcripts').glob('*.json')))['segments'][0]['text'])
+
     def test_audio_rejects_image_mode_and_video_command(self):
         if SKILL.name.endswith('vision'):
             self.skipTest('Audio edition boundary')

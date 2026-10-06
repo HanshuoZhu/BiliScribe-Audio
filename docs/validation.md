@@ -2,7 +2,7 @@
 
 日期：2026-10-06；本地 Windows，Python 3.12.14。
 
-7 个公开安装/文字接口测试通过。
+8 个公开安装/文字接口测试通过。
 
 两版 Skill 均通过 quick_validate。Markdown 本地链接、Python 语法与工作流 YAML 已检查。已安装 Skill 的源码完整复制、移开仓库后的入口运行、更新保留 .env、独立配置加载、时间与引用、输入改变后失效都经离线检查。
 
@@ -13,3 +13,5 @@ Vision 的入口、参数、结果三张合成图片由当前 Codex 实际打开
 - requests 2.34.2
 - pypdf 6.19.0
 - imageio-ffmpeg 0.6.0
+
+首次远端 CI 暴露了 Windows 英文终端的中文日志编码问题；已修复公共转录函数并增加 cp1252 回归测试，后续结果以 Actions 为准。

@@ -281,7 +281,15 @@ def apply_rules(text: str, rules: list[tuple[str, str, bool]]) -> tuple[str, lis
     return text, hits
 
 
+def configure_console() -> None:
+    """Keep Chinese diagnostics readable even when called outside the CLI entrypoint."""
+    for stream in (sys.stdout, sys.stderr):
+        if callable(getattr(stream, "reconfigure", None)):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
+
 def run_glossary(args) -> int:
+    configure_console()
     rules = load_glossary(Path(args.apply_glossary), args.glossary_min_len)
     files = []
     for raw in args.inputs or [str(args.outdir)]:
@@ -373,8 +381,7 @@ def manifest_audio(manifest_path: Path, audio_dir: Path) -> list[tuple[Path, str
 # --------------------------------------------------------------------------- main
 
 def main() -> int:
-    if sys.stdout.encoding and sys.stdout.encoding.lower() not in ("utf-8", "utf8"):
-        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    configure_console()
 
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("inputs", nargs="*", help="audio files and/or directories")
