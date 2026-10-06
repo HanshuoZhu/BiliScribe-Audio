@@ -1,5 +1,7 @@
 # BiliScribe-Audio
 
+[![Offline checks](https://github.com/826784562/BiliScribe-Audio/actions/workflows/ci.yml/badge.svg)](https://github.com/826784562/BiliScribe-Audio/actions/workflows/ci.yml)
+
 [中文](README.md) · [Quick start](docs/quickstart.md) · [Examples](examples/README.md)
 
 Turn Bilibili subtitles and speech transcripts into source-traceable study notes.
@@ -34,6 +36,6 @@ Image-only slides, handwritten formulas and screen-only parameters are outside A
 
 ## Contribute
 
-See [CONTRIBUTING](CONTRIBUTING.md), [security guidance](SECURITY.md) and [roadmap](docs/roadmap.md). Use anonymized, redistributable reproductions. CI is configured for Windows and Ubuntu on Python 3.11/3.12; its remote success is not claimed until it runs.
+See [CONTRIBUTING](CONTRIBUTING.md), [security guidance](SECURITY.md) and [roadmap](docs/roadmap.md). Use anonymized, redistributable reproductions. CI is configured for Windows and Ubuntu on Python 3.11/3.12; all four platform/version jobs have passed; the badge shows the current status.
 
 GPL-3.0-or-later. Original copyright and third-party attribution are preserved in [LICENSE](LICENSE) and [NOTICE](NOTICE). Preserves the v11 audio-focused product scope with later timestamp and provenance fixes backported. See the companion [BiliScribe-Vision](https://github.com/826784562/BiliScribe-Vision).

@@ -6,6 +6,8 @@
   <p>Codex Skill · Python 3.11+ · GPL-3.0-or-later</p>
 </div>
 
+[![Offline checks](https://github.com/826784562/BiliScribe-Audio/actions/workflows/ci.yml/badge.svg)](https://github.com/826784562/BiliScribe-Audio/actions/workflows/ci.yml)
+
 原生字幕 / 本地或云语音转写 → 当前 Codex 理解 → PPT/PDF 文字补充 → 讲义与独立习题。
 
 适合课程复习、公式与知识点整理、以讲解为主的课程。讲义沿课程顺序组织，每个课堂结论保留讲次、时间与来源；课本补充和 AI 补解单独标记。
@@ -90,7 +92,7 @@ python -m unittest discover -s tests -v
 
 ```
 
-CI 配置覆盖 Windows / Ubuntu 与 Python 3.11 / 3.12，离线检查不下载真实课程或 ASR 模型。工作流首次在 GitHub 成功运行前不宣称 CI 已通过。欢迎提供可公开复现的错误和授权示例，见 [贡献指南](CONTRIBUTING.md)、[行为准则](CODE_OF_CONDUCT.md)、[安全说明](SECURITY.md)。
+CI 配置覆盖 Windows / Ubuntu 与 Python 3.11 / 3.12，离线检查不下载真实课程或 ASR 模型。四组远端 CI 已通过，含 Windows/Ubuntu 与 Python 3.11/3.12；当前结果见上方状态徽章。欢迎提供可公开复现的错误和授权示例，见 [贡献指南](CONTRIBUTING.md)、[行为准则](CODE_OF_CONDUCT.md)、[安全说明](SECURITY.md)。
 
 ## 许可证与致谢
 
