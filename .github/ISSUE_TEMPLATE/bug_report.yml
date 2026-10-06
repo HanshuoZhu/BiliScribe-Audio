@@ -1,0 +1,26 @@
+name: Bug / 错误报告
+description: 提供脱敏且可复现的行为错误
+body:
+  - type: markdown
+    attributes:
+      value: 请勿上传密钥、Cookie、私人课程或未经许可的教材。自动校验和语义准确性是不同问题。
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境 / Environment
+      description: 系统、Python、项目版本、项目或全局安装方式；涉及理解时说明当前 Codex 是否能看图
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现 / Reproduction
+      description: 命令、最小授权材料、脱敏错误输出，以及实际发生了什么
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待结果与证据 / Expected behavior and evidence
+    validations:
+      required: true

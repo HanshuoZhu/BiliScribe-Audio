@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<title id="title">BiliScribe-Audio</title><desc id="desc">Transcripts to evidence-backed learning notes through the current Codex.</desc>
+<rect width="1200" height="340" rx="24" fill="#0b1220"/>
+<circle cx="1110" cy="30" r="190" fill="#143548"/>
+<text x="65" y="90" font-family="Segoe UI,Arial,sans-serif" font-size="48" font-weight="700" fill="#f8fafc">BiliScribe-Audio</text>
+<text x="67" y="132" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#9bdce7">Keep the teacher’s words. Trace every claim.</text>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#eef7fa">
+<rect x="65" y="185" width="255" height="90" rx="14" fill="#1e3246"/><text x="85" y="235">Subtitle / transcript</text>
+<path d="M337 230h65m-15-12 15 12-15 12" stroke="#67d2dc" stroke-width="3" fill="none"/>
+<rect x="420" y="185" width="285" height="90" rx="14" fill="#16566a"/><text x="442" y="222">Current Codex</text><text x="442" y="252" font-size="17">Evidence + supplied materials</text>
+<path d="M722 230h65m-15-12 15 12-15 12" stroke="#67d2dc" stroke-width="3" fill="none"/>
+<rect x="805" y="185" width="330" height="90" rx="14" fill="#1e3246"/><text x="827" y="222">Traceable notes</text><text x="827" y="252" font-size="17">Claims / citations / exercises</text></g></svg>

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "course_id": "synthetic-text-demo",
+  "understanding_mode": "transcript-only",
+  "units": [
+    {
+      "lesson_id": "L001",
+      "bvid": "BV1234567890",
+      "cid": 123,
+      "page": 1,
+      "title": "Synthetic emphasis lesson",
+      "duration": 12,
+      "source_order": 1,
+      "study_order": 1,
+      "selection": "confirmed",
+      "added_by": "user"
+    }
+  ]
+}

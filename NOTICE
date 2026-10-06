@@ -1,0 +1,46 @@
+bilibili-persona
+Copyright (C) 2026 bilibili-persona contributors
+
+本程序是自由软件：你可以按自由软件基金会发布的 GNU 通用公共许可证第 3 版
+（或任何更新的版本）条款重新发布和/或修改它。
+
+本程序的发布是希望它有用，但**不提供任何担保**，甚至不提供适销性或适合特定
+用途的默示担保。详见 GNU 通用公共许可证。
+
+你应该已随本程序收到一份 GNU 通用公共许可证副本（见 LICENSE）。
+如果没有，见 <https://www.gnu.org/licenses/>。
+
+===============================================================================
+第三方代码归属声明（Apache License 2.0 第 4(d) 条要求的声明）
+===============================================================================
+
+本项目在设计与实现上复用、改编了以下开源项目的代码与设计。按各自许可证要求
+保留署名：
+
+1. lineage-skill — https://github.com/JuneYaooo/lineage-skill
+   许可证：Apache License 2.0
+   复用内容：
+   - 证据溯源词汇表（provenance 取值集合）与 confidence 降级规则
+   - 质量门槛中的 grounded_ratio 判定思路
+   - teacher_model 的分层结构（认识模型 / 实践模型 / 边界）
+   - MinerU 云 API 文档解析流程（上传地址申请 → 上传 → 轮询 → 解包提取 Markdown）
+   - 蒸馏审计的 issue 类型划分（missing_transcript / unmatched_documents 等）
+   改动说明：字段名、输出结构、CLI 与产物格式均按本项目需求重写，
+   面向理工科课程视频而非通用师徒带教系统。
+
+2. lecture-to-notes — https://github.com/ysyecust/lecture-to-notes
+   许可证：GNU General Public License v3.0（与本项目一致）
+   复用内容：
+   - 字幕纠错词表的数据格式（JSON 映射 + 可选正则条目）与 --stats 统计做法
+   - 字幕/转写降级获取的整体思路
+   - 交付前自检闸门的思路
+   改动说明：本项目只保留「原生字幕 → 云 ASR → 本地 ASR」三级降级，
+   不做烧录字幕 OCR 与纯视觉路径；纠错词表增加了中文最小长度与可疑替换的安全阀。
+
+本项目不包含上述项目的任何数据、模型权重、课程内容或媒体文件。
+
+===============================================================================
+BiliScribe-Audio 1.0.0 modification notice — 2026-10-06
+本社区版本新增独立安装、跨平台依赖入口、原创示例、来源校验与发布文档。
+Audio 保留转录整理定位；Vision 支持当前 Codex 读取转录与关键帧。
+原始版权和上述第三方署名完整保留；Apache 2.0 全文见 licenses/Apache-2.0.txt。

@@ -1,0 +1,2 @@
+# Optional local speech transcription; first use may download model weights.
+faster-whisper>=1.1,<2

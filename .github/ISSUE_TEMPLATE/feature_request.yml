@@ -1,0 +1,16 @@
+name: Feature / 功能建议
+description: 说明使用场景、现有困难和验收方式
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: 使用场景 / Use case
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望行为与验收 / Proposal and acceptance criteria
+      description: 描述具体结果；可选提供有权公开的示例
+    validations:
+      required: true

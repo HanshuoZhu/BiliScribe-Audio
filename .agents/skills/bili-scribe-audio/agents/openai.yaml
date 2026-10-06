@@ -1,0 +1,7 @@
+interface:
+  display_name: "BiliScribe-Audio"
+  short_description: "Traceable notes from subtitles and speech transcripts"
+  brand_color: "#00A1D6"
+  default_prompt: "Use $bili-scribe-audio to turn this course into source-traceable study materials."
+policy:
+  allow_implicit_invocation: true
